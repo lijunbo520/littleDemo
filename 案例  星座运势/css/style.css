@@ -1,0 +1,52 @@
+
+div,p,span,h1,h2,h3,h4,img {padding: 0; margin: 0;}
+.box {
+    width: 280px;
+    height: 180px;
+    border: 1px solid #D2E1F1;
+    margin: 100px auto;
+}
+.header {
+    line-height: 34px;
+    padding-left: 16px;
+    color: #0873CD;
+    font-weight: 900;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: url(../astroIcon.png) no-repeat;
+    float: left;
+    margin: 0 15px;
+}
+
+.right-today {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.yunshi {
+    position: relative;
+    width: 80px;
+    height: 13px;
+    display: inline-block;
+    background: url(../yunshi.png) no-repeat;/*默认是上面灰色星星部分*/
+}
+.star {
+    width: 80px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../yunshi.png) no-repeat left bottom;/*取图片左下面部分遮盖父元素的灰色星星
+    可以修改宽度实现1-5星的效果*/
+}
+
+
+.index-content {
+    padding: 15px;
+    clear: both;
+    color: #323F5A;
+    overflow: hidden;
+}
