@@ -40,12 +40,13 @@
         animate(box,400) 
     }
     
-    function animate(obj,target,speed){//第一个参数对象，第二个参数是目标位置，第三个参数是速度
+    function animate(obj,target){//第一个参数对象，第二个参数是目标位置
         clearInterval(obj.timer)
         var speed = target-obj.offsetLeft > 0 ? 5 : -5 ;// 用来判断 应该 +  还是 -
         obj.timer = setInterval(function(){
+            var result = target - obj.offsetLeft; // 因为他们的差值不会超过5
             obj.style.left = obj.offsetLeft + speed +"px";
-            if(Math.abs(target-obj.offsetLeft)<= 5){// 因为target-obj.offsetLeft他们的差值不会超过5
+            if(Math.abs(result)<= 5){// 因为target-obj.offsetLeft他们的差值不会超过5
                 clearInterval(obj.timer);
                 obj.style.left = target +"px";// 有5像素差距   我们直接跳转目标位置
             }
